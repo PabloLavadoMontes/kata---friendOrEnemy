@@ -8,7 +8,7 @@ export {friend, checksString}
 function friend (friends: string[]): string[] {
     let realFriends: string[] = [];
     friends.forEach(friend => {
-    if (checksString(friend) && realFriends.includes(friend) === false) {
+    if (checksString(friend) && !realFriends.includes(friend)) {
         realFriends.push(friend);
     }
     }) 
@@ -22,5 +22,5 @@ function friend (friends: string[]): string[] {
  */
 function checksString (name: string): boolean {
     const regex: RegExp = /^[a-zA-Z]+$/;
-    return name.length !== 4 || !regex.test(name) ? false : true;
+    return !(name.length !== 4 || !regex.test(name));
 }

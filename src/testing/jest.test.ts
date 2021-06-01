@@ -32,7 +32,7 @@ test("Filters a list of strings and returns a list with only your friends", () =
 
 // Tests for checksString()
 test("Checks the value of a string and returns false if contains a number, a empty string...", () => {
-    expect(checksString("1221")).toStrictEqual(false);
+    expect(checksString("abcde5")).toStrictEqual(false);
 });
 test("Checks the value of a string and returns false if contains a number, a empty string...", () => {
     expect(checksString("")).toStrictEqual(false);
